@@ -36,12 +36,23 @@
                            </a>
                         </li>
                         <li class="slide">
-                           <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{route('admin.level.index')}}"><i class="fa fa-object-group side-menu__icon"></i><span class="side-menu__label">Level Commission</span>
+                           <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{route('admin.level.index')}}"><i class="fa fa-object-group side-menu__icon"></i><span class="side-menu__label">Business Incharge</span>
                            </a>
                         </li>
                         <li class="slide">
-                           <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{route('admin.divident.index')}}"><i class="fa fa-object-group side-menu__icon"></i><span class="side-menu__label">Divident Commission</span>
+                           <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{route('admin.divident.index')}}"><i class="fa fa-object-group side-menu__icon"></i><span class="side-menu__label">Investor Commission</span>
                            </a>
+                        </li>
+                        <li class="slide">
+                           <a class="side-menu__item" data-bs-toggle="slide" href="#">
+                              <i class="fa fa-money side-menu__icon"></i>
+                              <span class="side-menu__label">Payout</span><i class="angle fa fa-angle-right"></i>
+                           </a>
+                           <ul class="slide-menu">
+                              <li class="side-menu-label1"><a href="javascript:void(0)">Payout</a></li>
+                              <li><a href="{{route('admin.business')}}" class="slide-item">Business Incharge</a></li>
+                              <li><a href="{{route('admin.investor')}}" class="slide-item">Investor Commission</a></li>
+                           </ul>
                         </li>
                         @endif
                      </ul>

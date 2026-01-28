@@ -132,15 +132,20 @@ class LoginUserController extends Controller
                $pin->save();
 
                /** Commission Split UP */
-               $amount = $pin?->plan?->amount;
+               $amount = $pin?->plan?->amounts;
+               $lastValue = end($amount);
+               while (count($amount) < 18) {
+                  $amount[] = $lastValue;
+               }
                /*$commission = [5,4,2,1,1,0.5,0.5,0.5,0.5,0.5,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25];*/
                $commission = [10,10,10,8,8,6,6,6,6,6,4,4,2,2,2,2,1,1];
                $parents = array_slice(explode(',', $login_user->parent), 0, 18);
                foreach($parents as $p => $parent){
-                  $totalCount = Divident::where('user_id', $parent)->count();
+                  /*$totalCount = Divident::where('user_id', $parent)->count();
                   $userPlan = LoginUser::with('pin')->findOrfail($parent);
                   $dividentCount = $totalCount > 13 ? 12 : $totalCount;
-                  $o_amount = intval($userPlan?->pin?->plan?->amounts[$dividentCount]);
+                  $o_amount = intval($userPlan?->pin?->plan?->amounts[$dividentCount]);*/
+                  $o_amount = intval($amount[$p]);
                   $level = new Level();
                   $level->user_id = $parent;
                   $level->whom_id = $login_user->id;

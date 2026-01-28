@@ -27,30 +27,34 @@ class CronController extends Controller
    public function month() {
       return DB::transaction(function () {
          try {
-            $loginUsers = LoginUser::with('pin')->where('divident_close', 0)->get();
+            $loginUsers = LoginUser::whereDay('created_at', now()->day)->whereDate('created_at', '<', now()->toDateString())->where('divident_close', 0)->get();
+            $rows = [];
             foreach($loginUsers as $loginUser) {
                $totalCount = Divident::where('user_id', $loginUser->id)->count();
-               if($totalCount > 13){
+               if($totalCount < 13){
                   $amount = intval($loginUser?->pin?->plan?->amounts[$totalCount]);
-                  $divident = new Divident();
-                  $divident->user_id = $loginUser->id;
-                  $divident->amount = $amount;
-                  $divident->created_at = now();
-                  $divident->updated_at = null;
-                  $divident->save();
 
-                  if($divident) {
-                     $dividentCount = $totalCount+1;
-                     if($dividentCount == 12){
-                        $loginUser->divident_close = 1;
-                        $loginUser->updated_at = now();
-                        $loginUser->save();
-                     }
+                  $rows[] = [
+                     'user_id'    => $loginUser->id,
+                     'amount'     => $amount,
+                     'date'       => now()->toDateString(),
+                     'created_at' => now(),
+                     'updated_at' => now(),
+                  ];
+
+                  if ($totalCount + 1 == 12) {
+                     $loginUser->divident_close = 1;
+                     $loginUser->updated_at = now();
+                     $loginUser->save();
                   }
                }
             }
+            Divident::upsert($rows, ['user_id', 'date'], []);
+            DB::commit();
+            echo "Cron job executed successfully ". now();
          } catch (\Exception $e) {
             DB::rollBack();
+            echo 'Error: ' . $e->getMessage();
          }
       });
    }

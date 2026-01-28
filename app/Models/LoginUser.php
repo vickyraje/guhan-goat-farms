@@ -25,4 +25,14 @@ class LoginUser extends Authenticatable
    {
       return $this->belongsTo(Pin::class)->with('plan');
    }
+
+   public function levels()
+   {
+      return $this->hasMany(Level::class, 'user_id', 'id');
+   }
+
+   public function dividents()
+   {
+      return $this->hasMany(Divident::class, 'user_id', 'id');
+   }
 }

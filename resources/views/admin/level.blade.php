@@ -10,7 +10,7 @@
    <!-- PAGE-HEADER -->
    <div class="page-header">
       <div>
-         <h1 class="page-title">Level Commissions List</h1>
+         <h1 class="page-title">Level Commissions List </h1>
       </div>
       <div class="ms-auto pageheader-btn">
          <ol class="breadcrumb">
@@ -33,9 +33,9 @@
                         <tr>
                            <th class="wd-15p border-bottom-0">S.No</th>
                            <th class="wd-15p border-bottom-0">Date</th>
-                           <th class="wd-15p border-bottom-0">Username</th>
+                           <th class="wd-15p border-bottom-0">Business Incharge</th>
                            <th class="wd-15p border-bottom-0">Plan</th>
-                           <th class="wd-15p border-bottom-0">Whom</th>
+                           <th class="wd-15p border-bottom-0">Investor</th>
                            <th class="wd-15p border-bottom-0">Level</th>
                            <th class="wd-15p border-bottom-0">Amount</th>
                         </tr>
@@ -63,6 +63,7 @@
             ajax: {
                url: "{{ route('admin.level.datatable') }}",
                type: "POST",
+               data : {'user_id': '{{ request()->get("user_id") }}' }
             },
             columns: [
                {data: 'DT_RowIndex', name: 'id'},

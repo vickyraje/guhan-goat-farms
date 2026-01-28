@@ -31,10 +31,6 @@
                            <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{url('/user/change_password')}}"><i class="fa fa-recycle side-menu__icon"></i><span class="side-menu__label">Change Password</span>
                            </a>
                         </li>
-                        @php /*<li class="slide">
-                           <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{url('/user/genealogy_tree')}}"><i class="fa fa-transgender-alt side-menu__icon"></i><span class="side-menu__label">Genealogy Tree</span>
-                           </a>
-                        </li>*/ @endphp
                         <li class="slide">
                            <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{ route('user.pin.index') }}"><i class="fa fa-lock side-menu__icon"></i><span class="side-menu__label">Pin List</span>
                            </a>
@@ -48,11 +44,11 @@
                            </a>
                         </li>
                         <li class="slide">
-                           <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{ route('user.level.index') }}"><i class="fa fa-object-group side-menu__icon"></i><span class="side-menu__label">Level Commissions</span>
+                           <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{ route('user.level.index') }}"><i class="fa fa-object-group side-menu__icon"></i><span class="side-menu__label">Business Incharge</span>
                            </a>
                         </li>
                         <li class="slide">
-                           <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{ route('user.divident.index') }}"><i class="fa fa-object-group side-menu__icon"></i><span class="side-menu__label">Divident Commissions</span>
+                           <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{ route('user.divident.index') }}"><i class="fa fa-object-group side-menu__icon"></i><span class="side-menu__label">Investor Commissions</span>
                            </a>
                         </li>
                         @endif

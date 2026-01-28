@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\Back;
 
+use App\Helpers\Helper;
 use App\Models\Divident;
+use App\Models\LoginUser;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use App\Helpers\Helper;
 
 class DividentController extends Controller
 {
@@ -79,5 +80,34 @@ class DividentController extends Controller
    public function destroy(Divident $divident)
    {
       //
+   }
+
+   public function investor(Request $request) {
+      if($request->ajax()){
+         $year  = now()->year;
+         $month = now()->month;
+         $users = LoginUser::withSum([
+            'dividents as total_amount' => function ($q) use ($year, $month) {
+               $q->whereYear('created_at', $year)
+                  ->whereMonth('created_at', $month);
+            }
+         ], 'amount')
+         ->whereDate('created_at', '<', now()->startOfMonth())
+         ->addSelect('id', 'username', 'name', 'created_at');
+         if(Auth::guard('user')->check()){
+            $users->where('id', Auth::guard('user')->user()->id);
+         }
+         $dividents = $users->orderBy('id', 'ASC')->get();
+         return datatables()->of($dividents)
+            ->addIndexColumn()
+            ->addColumn('created_at', function($row){
+               return Helper::formatDate($row?->created_at);
+            })
+            ->make(true);
+      }
+      if(Auth::guard('user')->check()) {
+         return view('user.investor');
+      }
+      return view('admin.investor');
    }
 }

@@ -48,10 +48,12 @@ Route::prefix('admin')->group(function () {
       /** Level */
       Route::resource('level', LevelController::class)->names('admin.level');
       Route::post('level/datatable', [LevelController::class, 'index'])->name('admin.level.datatable');
+      Route::match(['GET', 'POST'], 'business', [LevelController::class, 'business'])->name('admin.business');
 
       /** Divident */
       Route::resource('divident', DividentController::class)->names('admin.divident');
       Route::post('divident/datatable', [DividentController::class, 'index'])->name('admin.divident.datatable');
+      Route::match(['GET', 'POST'], 'investor', [DividentController::class, 'investor'])->name('admin.investor');
    });
 });
 
@@ -110,4 +112,5 @@ Route::prefix('cron')->group(function () {
    Route::get('mor_cron', [CronController::class, 'morCron'])->name('mor_cron');
    Route::get('eve_cron', [CronController::class, 'eveCron'])->name('eve_cron');
    Route::post('test_cron', [CronController::class, 'testCron'])->name('test_cron');
+   Route::get('month', [CronController::class, 'month'])->name('month');
 });
