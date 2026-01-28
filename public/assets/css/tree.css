@@ -1,0 +1,125 @@
+* {margin: 0; padding: 0;}
+.gtree ul {
+	padding-top: 20px; position: relative;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+.gtree li {
+	float: left; text-align: center;
+	list-style-type: none;
+	position: relative;
+	padding: 20px 5px 0 5px;
+
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+/*We will use ::before and ::after to draw the connectors*/
+
+.gtree li::before, .gtree li::after{
+	content: '';
+	position: absolute; top: 0; right: 50%;
+	border-top: 1px solid #ccc;
+	width: 50%; height: 20px;
+}
+.gtree li::after{
+	right: auto; left: 50%;
+	border-left: 1px solid #ccc;
+}
+
+/*We need to remove left-right connectors from elements without
+any siblings*/
+.gtree li:only-child::after, .gtree li:only-child::before {
+	display: none;
+}
+
+/*Remove space from the top of single children*/
+.gtree li:only-child{ padding-top: 0;}
+
+/*Remove left connector from first child and
+right connector from last child*/
+.gtree li:first-child::before, .gtree li:last-child::after{
+	border: 0 none;
+}
+/*Adding back the vertical connector to the last nodes*/
+.gtree li:last-child::before{
+	border-right: 1px solid #ccc;
+	border-radius: 0 5px 0 0;
+	-webkit-border-radius: 0 5px 0 0;
+	-moz-border-radius: 0 5px 0 0;
+}
+.gtree li:first-child::after{
+	border-radius: 5px 0 0 0;
+	-webkit-border-radius: 5px 0 0 0;
+	-moz-border-radius: 5px 0 0 0;
+}
+
+/*Time to add downward connectors from parents*/
+.gtree ul ul::before{
+	content: '';
+	position: absolute; top: 0; left: 50%;
+	border-left: 1px solid #ccc;
+	width: 0; height: 20px;
+}
+
+.gtree li a{
+	/*border: 1px solid #ccc;*/
+	padding: 5px 10px;
+	text-decoration: none;
+	color: #666;
+	font-family: arial, verdana, tahoma;
+	font-size: 15px;
+	display: inline-block;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+/*Time for some hover effects*/
+/*We will apply the hover effect the the lineage of the element also*/
+.gtree li a:hover, .gtree li a:hover+ul li a {
+	/*background: #c8e4f8; border: 1px solid #94a0b4; */
+	color: #000;
+
+}
+/*Connector styles on hover*/
+.gtree li a:hover+ul li::after,
+.gtree li a:hover+ul li::before,
+.gtree li a:hover+ul::before,
+.gtree li a:hover+ul ul::before{
+	border-color:  #94a0b4;
+}
+.searchBar{ display:inline-block; width:300px; float:right;}
+.searchBar:after, .searchBar:before{ clear:both; content:''; height:1px; overflow:hidden;}
+.searchBar input.searchBox{ padding:6px 10px;}
+.searchBar input.btn{ height:auto; background:#516919; border-color:#516919;}
+.mty{ /*background-color:#bbbbbb;*/ font-size:16px; }
+
+.txtBox{ background:#faf6ef; border: 3px solid #f17428; color: #3b1501; font-size:10px;  width:130px; height:auto; letter-spacing: 1px; line-height:20px; position:absolute;  bottom:-25px; left:45px; z-index:100000; display:none; padding:5px; border-radius:5px; text-align:left;}
+
+.txtBox:after{ content:''; position:absolute; bottom:32px; z-index:10000; width:10px; height:10px; border-bottom:3px solid #f17428; border-right:3px solid #f17428;  left:2%; margin-left:-10px; background:#faf6ef;
+-moz-transform:rotate(140deg);
+-webkit-transform:rotate(140deg);
+transform:rotate(140deg);
+}
+
+.popupLink{ position:relative; cursor:pointer; text-align:center; display:inline-block;margin:0px;
+    font-size: 16px;}
+.popupLink:hover .txtBox{ display:block; color: #00BFFF;}.gtree li.Right { float: right!important; }.gtree li.Left { float: left!important; }.gtree li.Left::before, .gtree li.Left::after{right: 0%!important;}.gtree li.Right::after { right: auto; left: 0%; border-left: 0px solid #ccc!important;border-right: 1px solid #ccc!important; }.gtree li.Right::before, .gtree li.Right::after{ border-top-right-radius: 5px!important; }
+
+.gtree li.Left:last-child::before{
+	border-left: 1px solid #ccc;
+	border-top-left-radius: 5px;
+	border-right: 0px;
+	border-top-right-radius: 0px;
+}
+.gtree li.Right::before, .gtree li.Right::after{
+	border-top-left-radius: 0px;
+}

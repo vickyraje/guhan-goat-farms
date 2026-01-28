@@ -1,0 +1,109 @@
+.side-menu__item {
+    color: #111 !important;
+}
+
+.sidebar-mini .side-menu .side-menu__icon {
+    fill: #9d9d9d;
+    color: #9d9d9d;
+}
+
+.side-menu__item.active .side-menu__icon,
+.side-menu__item.active:hover .side-menu__icon {
+    fill: #6b7c0c !important;
+    color: #6b7c0c !important;
+}
+
+.side-menu__item.active .side-menu__label {
+    color: #6b7c0c !important;
+}
+
+.side-header {
+    height: 63px;
+    padding: 15px 15px !important;
+}
+
+.breadcrumb-item a {
+    color: #6b7c0c;
+}
+
+.breadcrumb-item.active {
+    color: #707070;
+}
+
+a,
+a:hover {
+    color: #6b7c0c;
+}
+
+:root {
+    --primary-bg-color: #6b7c0c;
+    --primary-bg-hover: #0267af;
+    --primary-bg-border: #6b7c0c;
+}
+
+.ful-wdh {
+    width: 100%;
+    margin: 0;
+}
+
+.ful-wdh .col-md-3 {
+    width: 100%;
+    flex: unset;
+    max-width: 100%;
+}
+
+.ful-wdh .col-md-9 {
+    width: 100%;
+    flex: unset;
+    max-width: 100%;
+}
+
+.header-brand-img {
+    height: 175px !important;
+}
+
+.user-bg {
+    background: url(https://guhan.teamdev.co.in/assets/images/user-bg.jpg) !important;
+}
+
+.admin-bg {
+    background: url(https://guhan.teamdev.co.in/assets/images/admin-bg.jpg) !important;
+}
+
+.login-img:before {
+    background: rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(5px);
+}
+
+.header-brand1.brd {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-brand1.brd span {
+    text-align: left;
+    display: flex;
+    width: auto;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.header-brand1.brd span i {
+    font-style: normal;
+    margin-left: 5px;
+}
+
+.header-brand1.brd .header-brand-img {
+    height: 32px !important;
+}
+
+.app.sidebar-mini.sidenav-toggled .header-brand1.brd span {
+    display: none;
+}
+
+@media (max-width: 991.98px) {
+    .logo-horizontal .header-brand-img {
+        height: 50px !important;
+    }
+}
