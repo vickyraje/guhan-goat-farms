@@ -34,6 +34,7 @@
                            <th class="wd-15p border-bottom-0">S.No</th>
                            <th class="wd-15p border-bottom-0">Date</th>
                            <th class="wd-15p border-bottom-0">Username</th>
+                           <th class="wd-15p border-bottom-0">Plan</th>
                            <th class="wd-15p border-bottom-0">Whom</th>
                            <th class="wd-15p border-bottom-0">Level</th>
                            <th class="wd-15p border-bottom-0">Amount</th>
@@ -67,6 +68,7 @@
                {data: 'DT_RowIndex', name: 'id'},
                {data: 'created_at', name: 'created_at'},
                {data: 'user.username', name: 'user.username'},
+               {data: 'plan', name: 'plan'},
                {data: 'whom.username', name: 'whom.username'},
                {data: 'level', name: 'level'},
                {data: 'amount', name: 'amount'},

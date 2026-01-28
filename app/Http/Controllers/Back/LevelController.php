@@ -16,7 +16,7 @@ class LevelController extends Controller
    public function index(Request $request)
    {
       if($request->ajax()){
-         $levels = Level::with(['user:id,username,name', 'whom:id,username,name'])->orderBy('id', 'DESC');
+         $levels = Level::with(['user:id,username,name', 'whom:id,username,name,pin_id'])->orderBy('id', 'DESC');
          if(Auth::guard('user')->check()){
             $levels->where('user_id', Auth::guard('user')->user()->id);
          }
@@ -24,6 +24,9 @@ class LevelController extends Controller
             ->addIndexColumn()
             ->addColumn('created_at', function($row){
                return Helper::formatDate($row->created_at);
+            })
+            ->addColumn('plan', function($row){
+               return $row->whom->pin?->plan?->name ?? '-';
             })
             ->make(true);
       }
