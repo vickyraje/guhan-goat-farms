@@ -97,15 +97,9 @@ Route::prefix('user')->group(function () {
 });
 
 Route::prefix('/')->group(function () {
-   Route::get('/', [FrontController::class, 'index']);
-   Route::get('about', [FrontController::class, 'about']);
-   Route::get('service', [FrontController::class, 'service']);
-   Route::get('package', [FrontController::class, 'package']);
-   Route::get('contact', [FrontController::class, 'contact']);
-   Route::get('destination', [FrontController::class, 'destination']);
-   Route::get('guide', [FrontController::class, 'guide']);
-   Route::get('testimonial', [FrontController::class, 'testimonial']);
-   Route::get('blog', [FrontController::class, 'blog']);
+   Route::get('/', [FrontController::class, 'index'])->name('home');
+   Route::get('about', [FrontController::class, 'about'])->name('about');
+   Route::get('contact', [FrontController::class, 'contact'])->name('contact');
 });
 
 Route::prefix('cron')->group(function () {

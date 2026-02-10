@@ -1,7 +1,6 @@
 @extends('layouts.front.app')
 
 @section('title', 'Home')
-@section('description', 'Description')
 
 @section('styles')
 
@@ -9,620 +8,183 @@
 
 @section('content')
 
-            @include('frontend.home.slider')
 
-            <!-- Booking Start -->
-            <div class="container-fluid booking mt-5 pb-5">
-                <div class="container pb-5">
-                    <div class="bg-light shadow" style="padding: 30px;">
-                        <div class="row align-items-center" style="min-height: 60px;">
-                            <div class="col-md-10">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="mb-3 mb-md-0">
-                                            <select class="custom-select px-4" style="height: 47px;">
-                                                <option selected>Destination</option>
-                                                <option value="1">Weekend Package</option>
-                                                <option value="2">Adventure Package</option>
-                                                <option value="3">Summer Package</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="mb-3 mb-md-0">
-                                            <div class="date" id="date1" data-target-input="nearest">
-                                                <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Depart Date" data-target="#date1" data-toggle="datetimepicker"/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="mb-3 mb-md-0">
-                                            <div class="date" id="date2" data-target-input="nearest">
-                                                <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Return Date" data-target="#date2" data-toggle="datetimepicker"/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="mb-3 mb-md-0">
-                                            <select class="custom-select px-4" style="height: 47px;">
-                                                <option selected>Duration</option>
-                                                <option value="4">2 days</option>
-                                                <option value="5">5 days</option>
-                                                <option value="6">6 days </option>
-                                                <option value="7">7 days </option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <button class="btn btn-primary btn-block" type="submit" style="height: 47px; margin-top: -2px;">Submit</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+         <!-- Hero Section -->
+         <section class="hero">
+            <div class="hero-image">
+                  <img src="https://images.unsplash.com/photo-1593750187970-84858a2aaf5e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwxfHxnb2F0JTIwZmFybXxlbnwwfHx8fDE3NzAyNTMzMTB8MA&ixlib=rb-4.1.0&q=85" alt="Goat Farm">
+                  <div class="hero-overlay"></div>
             </div>
-            <!-- Booking End -->
-
-
-            <!-- About Start -->
-            <div class="container-fluid py-5">
-                <div class="container pt-5">
-                    <div class="row">
-                        <div class="col-lg-6" style="min-height: 500px;">
-                            <div class="position-relative h-100">
-                                <img class="position-absolute w-100 h-100" src="{{asset('front/img/about.jpg')}}" style="object-fit: cover;">
-                            </div>
+            <div class="hero-content">
+                  <div class="container">
+                     <div class="hero-text">
+                        <h1 class="hero-title">Premium Goat Farming</h1>
+                        <p class="hero-subtitle">Quality Livestock & Sustainable Farming Practices</p>
+                        <p class="hero-description">Welcome to our professional goat farm where we specialize in breeding healthy livestock, providing quality goat products, and promoting sustainable farming practices.</p>
+                        <div class="hero-buttons">
+                              <a href="about.html" class="btn btn-primary btn-lg">
+                                 Explore Our Farm
+                                 <span class="arrow">→</span>
+                              </a>
+                              <a href="contact.html" class="btn btn-outline btn-lg">Contact Us</a>
                         </div>
-                        <div class="col-lg-6 pt-5 pb-lg-5">
-                            <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
-                                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">About Us</h6>
-                                <h1 class="mb-3">We Provide Best Tour Packages In Your Budget</h1>
-                                <p>Dolores lorem lorem ipsum sit et ipsum. Sadip sea amet diam dolore sed et. Sit rebum labore sit sit ut vero no sit. Et elitr stet dolor sed sit et sed ipsum et kasd ut. Erat duo eos et erat sed diam duo</p>
-                                <div class="row mb-4">
-                                    <div class="col-6">
-                                        <img class="img-fluid" src="{{asset('front/img/about-1.jpg')}}" alt="about1">
-                                    </div>
-                                    <div class="col-6">
-                                        <img class="img-fluid" src="{{asset('front/img/package-2.jpg')}}" alt="about2">
-                                    </div>
-                                </div>
-                                <a href="{{url('/')}}" class="btn btn-primary mt-1">Book Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                     </div>
+                  </div>
             </div>
-            <!-- About End -->
+         </section>
 
-
-            <!-- Feature Start -->
-            <div class="container-fluid pb-5">
-                <div class="container pb-5">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="d-flex mb-4 mb-lg-0">
-                                <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3" style="height: 100px; width: 100px;">
-                                    <i class="fa fa-2x fa-money-check-alt text-white"></i>
-                                </div>
-                                <div class="d-flex flex-column">
-                                    <h5 class="">Competitive Pricing</h5>
-                                    <p class="m-0">Magna sit magna dolor duo dolor labore rebum amet elitr est diam sea</p>
-                                </div>
-                            </div>
+         <!-- Why Choose Us Section -->
+         <section class="section bg-gradient">
+            <div class="container">
+                  <div class="section-header">
+                     <h2 class="section-title">Why Choose Us</h2>
+                     <p class="section-subtitle">Excellence in goat farming with commitment to quality and sustainability</p>
+                  </div>
+                  <div class="grid grid-4">
+                     <div class="card">
+                        <div class="icon-circle">
+                              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                              </svg>
                         </div>
-                        <div class="col-md-4">
-                            <div class="d-flex mb-4 mb-lg-0">
-                                <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3" style="height: 100px; width: 100px;">
-                                    <i class="fa fa-2x fa-award text-white"></i>
-                                </div>
-                                <div class="d-flex flex-column">
-                                    <h5 class="">Best Services</h5>
-                                    <p class="m-0">Magna sit magna dolor duo dolor labore rebum amet elitr est diam sea</p>
-                                </div>
-                            </div>
+                        <h3 class="card-title">Healthy Livestock</h3>
+                        <p class="card-text">All our goats are raised with proper nutrition, healthcare, and ethical practices.</p>
+                     </div>
+                     <div class="card">
+                        <div class="icon-circle">
+                              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                 <circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/>
+                              </svg>
                         </div>
-                        <div class="col-md-4">
-                            <div class="d-flex mb-4 mb-lg-0">
-                                <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3" style="height: 100px; width: 100px;">
-                                    <i class="fa fa-2x fa-globe text-white"></i>
-                                </div>
-                                <div class="d-flex flex-column">
-                                    <h5 class="">Worldwide Coverage</h5>
-                                    <p class="m-0">Magna sit magna dolor duo dolor labore rebum amet elitr est diam sea</p>
-                                </div>
-                            </div>
+                        <h3 class="card-title">Expert Care</h3>
+                        <p class="card-text">Over 15 years of experience in goat farming and livestock management.</p>
+                     </div>
+                     <div class="card">
+                        <div class="icon-circle">
+                              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                 <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                              </svg>
                         </div>
-                    </div>
-                </div>
+                        <h3 class="card-title">Sustainable Practices</h3>
+                        <p class="card-text">Environment-friendly farming methods that ensure long-term sustainability.</p>
+                     </div>
+                     <div class="card">
+                        <div class="icon-circle">
+                              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                              </svg>
+                        </div>
+                        <h3 class="card-title">Quality Assurance</h3>
+                        <p class="card-text">Complete health records, vaccinations, and breeding documentation provided.</p>
+                     </div>
+                  </div>
             </div>
-            <!-- Feature End -->
+         </section>
 
-
-            <!-- Destination Start -->
-            <div class="container-fluid py-5">
-                <div class="container pt-5 pb-3">
-                    <div class="text-center mb-3 pb-3">
-                        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Destination</h6>
-                        <h1>Explore Top Destination</h1>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="destination-item position-relative overflow-hidden mb-2">
-                                <img class="img-fluid" src="{{asset('front/img/package-4.jpg')}}" alt="package1">
-                                <a class="destination-overlay text-white text-decoration-none" href="">
-                                    <h5 class="text-white">United States</h5>
-                                    <span>100 Cities</span>
-                                </a>
-                            </div>
+         <!-- Services Section -->
+         <section class="section">
+            <div class="container">
+                  <div class="section-header">
+                     <h2 class="section-title">Our Services</h2>
+                     <p class="section-subtitle">Comprehensive goat farming solutions for your needs</p>
+                  </div>
+                  <div class="grid grid-3">
+                     <div class="service-card">
+                        <div class="service-image">
+                              <img src="https://images.unsplash.com/photo-1514753910521-3dc1645aa97e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwyfHxoZWFsdGh5JTIwZ29hdHN8ZW58MHx8fHwxNzcwMjUzMzI2fDA&ixlib=rb-4.1.0&q=85" alt="Goat Breeding">
+                              <div class="service-icon">
+                                 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                 </svg>
+                              </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="destination-item position-relative overflow-hidden mb-2">
-                                <img class="img-fluid" src="{{asset('front/img/destination-2.jpg')}}" alt="package2">
-                                <a class="destination-overlay text-white text-decoration-none" href="">
-                                    <h5 class="text-white">United Kingdom</h5>
-                                    <span>100 Cities</span>
-                                </a>
-                            </div>
+                        <div class="service-content">
+                              <h3 class="service-title">Goat Breeding</h3>
+                              <p class="service-text">Expert breeding programs with superior bloodlines for healthy, productive livestock.</p>
                         </div>
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="destination-item position-relative overflow-hidden mb-2">
-                                <img class="img-fluid" src="{{asset('front/img/destination-3.jpg')}}" alt="package3">
-                                <a class="destination-overlay text-white text-decoration-none" href="">
-                                    <h5 class="text-white">Australia</h5>
-                                    <span>100 Cities</span>
-                                </a>
-                            </div>
+                     </div>
+                     <div class="service-card">
+                        <div class="service-image">
+                              <img src="https://images.unsplash.com/photo-1727113836223-b3ed82929ca3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwxfHxoZWFsdGh5JTIwZ29hdHN8ZW58MHx8fHwxNzcwMjUzMzI2fDA&ixlib=rb-4.1.0&q=85" alt="Livestock Sales">
+                              <div class="service-icon">
+                                 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                                 </svg>
+                              </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="destination-item position-relative overflow-hidden mb-2">
-                                <img class="img-fluid" src="{{asset('front/img/package-1.jpg')}}" alt="package4">
-                                <a class="destination-overlay text-white text-decoration-none" href="">
-                                    <h5 class="text-white">India</h5>
-                                    <span>100 Cities</span>
-                                </a>
-                            </div>
+                        <div class="service-content">
+                              <h3 class="service-title">Quality Livestock Sales</h3>
+                              <p class="service-text">Premium goats available for purchase with complete health documentation.</p>
                         </div>
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="destination-item position-relative overflow-hidden mb-2">
-                                <img class="img-fluid" src="{{asset('front/img/destination-5.jpg')}}" alt="package5">
-                                <a class="destination-overlay text-white text-decoration-none" href="">
-                                    <h5 class="text-white">South Africa</h5>
-                                    <span>100 Cities</span>
-                                </a>
-                            </div>
+                     </div>
+                     <div class="service-card">
+                        <div class="service-image">
+                              <img src="https://images.unsplash.com/photo-1632468648403-99a7942b8f71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHw0fHxoZWFsdGh5JTIwZ29hdHN8ZW58MHx8fHwxNzcwMjUzMzI2fDA&ixlib=rb-4.1.0&q=85" alt="Farm Consultation">
+                              <div class="service-icon">
+                                 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                                 </svg>
+                              </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="destination-item position-relative overflow-hidden mb-2">
-                                <img class="img-fluid" src="{{asset('front/img/blog-1.jpg')}}" alt="package6">
-                                <a class="destination-overlay text-white text-decoration-none" href="">
-                                    <h5 class="text-white">Indonesia</h5>
-                                    <span>100 Cities</span>
-                                </a>
-                            </div>
+                        <div class="service-content">
+                              <h3 class="service-title">Farm Consultation</h3>
+                              <p class="service-text">Professional guidance on goat farming, nutrition, and farm management.</p>
                         </div>
-                    </div>
-                </div>
+                     </div>
+                  </div>
             </div>
-            <!-- Destination Start -->
+         </section>
 
-
-            <!-- Service Start -->
-            <div class="container-fluid py-5">
-                <div class="container pt-5 pb-3">
-                    <div class="text-center mb-3 pb-3">
-                        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Services</h6>
-                        <h1>Tours & Travel Services</h1>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="service-item bg-white text-center mb-2 py-5 px-4">
-                                <i class="fa fa-2x fa-route mx-auto mb-4"></i>
-                                <h5 class="mb-2">Travel Guide</h5>
-                                <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
-                            </div>
+         <!-- Testimonials Section -->
+         <section class="section bg-light">
+            <div class="container">
+                  <div class="section-header">
+                     <h2 class="section-title">What Our Customers Say</h2>
+                     <p class="section-subtitle">Trusted by farmers and livestock owners across the region</p>
+                  </div>
+                  <div class="grid grid-3">
+                     <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Excellent quality goats! The breeding stock I purchased has significantly improved my farm's productivity."</p>
+                        <div class="testimonial-author">
+                              <strong>Rajesh Kumar</strong>
+                              <span>Dairy Farmer</span>
                         </div>
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="service-item bg-white text-center mb-2 py-5 px-4">
-                                <i class="fa fa-2x fa-ticket-alt mx-auto mb-4"></i>
-                                <h5 class="mb-2">Ticket Booking</h5>
-                                <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
-                            </div>
+                     </div>
+                     <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Very professional service and healthy animals. The consultation services helped me start my own goat farm successfully."</p>
+                        <div class="testimonial-author">
+                              <strong>Priya Sharma</strong>
+                              <span>Farm Owner</span>
                         </div>
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="service-item bg-white text-center mb-2 py-5 px-4">
-                                <i class="fa fa-2x fa-hotel mx-auto mb-4"></i>
-                                <h5 class="mb-2">Hotel Booking</h5>
-                                <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
-                            </div>
+                     </div>
+                     <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Trustworthy and transparent dealings. I've been buying from them for 3 years now."</p>
+                        <div class="testimonial-author">
+                              <strong>Mohammed Ali</strong>
+                              <span>Livestock Trader</span>
                         </div>
-                    </div>
-                </div>
+                     </div>
+                  </div>
             </div>
-            <!-- Service End -->
+         </section>
 
-
-            <!-- Packages Start -->
-            <div class="container-fluid py-5">
-                <div class="container pt-5 pb-3">
-                    <div class="text-center mb-3 pb-3">
-                        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Packages</h6>
-                        <h1>Pefect Tour Packages</h1>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="package-item bg-white mb-2">
-                                <img class="img-fluid" src="{{asset('front/img/package-1.jpg')}}" alt="package1">
-                                <div class="p-4">
-                                    <div class="d-flex justify-content-between mb-3">
-                                        <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>GOA</small>
-                                        <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>2 days</small>
-                                        <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
-                                    </div>
-                                    <a class="h5 text-decoration-none" href="">HONEYMOON PACK</a>
-                                    <div class="border-top mt-4 pt-4">
-                                        <div class="d-flex justify-content-between">
-                                            <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
-                                            <h5 class="m-0">₹ 22,500/-</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="package-item bg-white mb-2">
-                                <img class="img-fluid" src="{{asset('front/img/package-4.jpg')}}" alt="package4">
-                                <div class="p-4">
-                                    <div class="d-flex justify-content-between mb-3">
-                                        <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>GOA</small>
-                                        <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
-                                        <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>4 Person</small>
-                                    </div>
-                                    <a class="h5 text-decoration-none" href="">FRIENDS PACK</a>
-                                    <div class="border-top mt-4 pt-4">
-                                        <div class="d-flex justify-content-between">
-                                            <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(2500)</small></h6>
-                                            <h5 class="m-0">₹ 29,000/-</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="package-item bg-white mb-2">
-                                <img class="img-fluid" src="{{asset('front/img/destination-3.jpg')}}" alt="destination3">
-                                <div class="p-4">
-                                    <div class="d-flex justify-content-between mb-3">
-                                        <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>GOA</small>
-                                        <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>4 days</small>
-                                        <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
-                                    </div>
-                                    <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
-                                    <div class="border-top mt-4 pt-4">
-                                        <div class="d-flex justify-content-between">
-                                            <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
-                                            <h5 class="m-0">₹ 32,000/-</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="package-item bg-white mb-2">
-                                <img class="img-fluid" src="{{asset('front/img/package-2.jpg')}}" alt="package2">
-                                <div class="p-4">
-                                    <div class="d-flex justify-content-between mb-3">
-                                        <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>GOA</small>
-                                        <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>5 days</small>
-                                        <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
-                                    </div>
-                                    <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
-                                    <div class="border-top mt-4 pt-4">
-                                        <div class="d-flex justify-content-between">
-                                            <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.8 <small>(290)</small></h6>
-                                            <h5 class="m-0">₹ 29,000/-</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="package-item bg-white mb-2">
-                                <img class="img-fluid" src="{{asset('front/img/blog-3.jpg')}}" alt="blog3">
-                                <div class="p-4">
-                                    <div class="d-flex justify-content-between mb-3">
-                                        <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>GOA</small>
-                                        <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>6 days</small>
-                                        <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
-                                    </div>
-                                    <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
-                                    <div class="border-top mt-4 pt-4">
-                                        <div class="d-flex justify-content-between">
-                                            <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(1050)</small></h6>
-                                            <h5 class="m-0">₹ 30,000/-</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="package-item bg-white mb-2">
-                                <img class="img-fluid" src="{{asset('front/img/blog-2.jpg')}}" alt="blog4">
-                                <div class="p-4">
-                                    <div class="d-flex justify-content-between mb-3">
-                                        <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>GOA</small>
-                                        <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>7 days</small>
-                                        <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
-                                    </div>
-                                    <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
-                                    <div class="border-top mt-4 pt-4">
-                                        <div class="d-flex justify-content-between">
-                                            <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(150)</small></h6>
-                                            <h5 class="m-0">₹ 35,000/-</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+         <!-- CTA Section -->
+         <section class="cta-section">
+            <div class="container">
+                  <div class="cta-content">
+                     <h2 class="cta-title">Ready to Start Your Goat Farming Journey?</h2>
+                     <p class="cta-text">Get in touch with us today for quality livestock and expert consultation</p>
+                     <a href="contact.html" class="btn btn-white btn-lg">
+                        Contact Us Today
+                        <span class="arrow">→</span>
+                     </a>
+                  </div>
             </div>
-            <!-- Packages End -->
+         </section>
 
-
-            <!-- Registration Start -->
-            <div class="container-fluid bg-registration py-5" style="margin: 90px 0;">
-                <div class="container py-5">
-                    <div class="row align-items-center">
-                        <div class="col-lg-7 mb-5 mb-lg-0">
-                            <div class="mb-4">
-                                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Mega Offer</h6>
-                                <h1 class="text-white"><span class="text-primary">30% OFF</span> For Honeymoon</h1>
-                            </div>
-                            <p class="text-white">Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos,
-                                ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est
-                                dolor</p>
-                            <ul class="list-inline text-white m-0">
-                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Labore eos amet dolor amet diam</li>
-                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Etsea et sit dolor amet ipsum</li>
-                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Diam dolor diam elitripsum vero.</li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="card border-0">
-                                <div class="card-header bg-primary text-center p-4">
-                                    <h1 class="text-white m-0">Sign Up Now</h1>
-                                </div>
-                                <div class="card-body rounded-bottom bg-white p-5">
-                                    <form>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control p-4" placeholder="Your name" required="required" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="email" class="form-control p-4" placeholder="Your email" required="required" />
-                                        </div>
-                                        <div class="form-group">
-                                            <select class="custom-select px-4" style="height: 47px;">
-                                                <option selected>Select a destination</option>
-                                                <option value="1">destination 1</option>
-                                                <option value="2">destination 1</option>
-                                                <option value="3">destination 1</option>
-                                            </select>
-                                        </div>
-                                        <div>
-                                            <button class="btn btn-primary btn-block py-3" type="submit">Sign Up Now</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Registration End -->
-
-
-            <!-- Team Start -->
-            <div class="container-fluid py-5">
-                <div class="container pt-5 pb-3">
-                    <div class="text-center mb-3 pb-3">
-                        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Guides</h6>
-                        <h1>Our Travel Guides</h1>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
-                            <div class="team-item bg-white mb-4">
-                                <div class="team-img position-relative overflow-hidden">
-                                    <img class="img-fluid w-100" src="{{asset('front/img/team-1.jpg')}}" alt="team1">
-                                    <div class="team-social">
-                                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
-                                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    </div>
-                                </div>
-                                <div class="text-center py-4">
-                                    <h5 class="text-truncate">Guide Name</h5>
-                                    <p class="m-0">Designation</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
-                            <div class="team-item bg-white mb-4">
-                                <div class="team-img position-relative overflow-hidden">
-                                    <img class="img-fluid w-100" src="{{asset('front/img/team-2.jpg')}}" alt="team2">
-                                    <div class="team-social">
-                                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
-                                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    </div>
-                                </div>
-                                <div class="text-center py-4">
-                                    <h5 class="text-truncate">Guide Name</h5>
-                                    <p class="m-0">Designation</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
-                            <div class="team-item bg-white mb-4">
-                                <div class="team-img position-relative overflow-hidden">
-                                    <img class="img-fluid w-100" src="{{asset('front/img/team-3.jpg')}}" alt="team3">
-                                    <div class="team-social">
-                                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
-                                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    </div>
-                                </div>
-                                <div class="text-center py-4">
-                                    <h5 class="text-truncate">Guide Name</h5>
-                                    <p class="m-0">Designation</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
-                            <div class="team-item bg-white mb-4">
-                                <div class="team-img position-relative overflow-hidden">
-                                    <img class="img-fluid w-100" src="{{asset('front/img/team-4.jpg')}}" alt="team4">
-                                    <div class="team-social">
-                                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
-                                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    </div>
-                                </div>
-                                <div class="text-center py-4">
-                                    <h5 class="text-truncate">Guide Name</h5>
-                                    <p class="m-0">Designation</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Team End -->
-
-
-            <!-- Testimonial Start -->
-            <div class="container-fluid py-5">
-                <div class="container py-5">
-                    <div class="text-center mb-3 pb-3">
-                        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Testimonial</h6>
-                        <h1>What Say Our Clients</h1>
-                    </div>
-                    <div class="owl-carousel testimonial-carousel">
-                        <div class="text-center pb-4">
-                            <img class="img-fluid mx-auto" src="{{asset('front/img/testimonial-1.jpg')}}" alt="testimonial1" style="width: 100px; height: 100px;" >
-                            <div class="testimonial-text bg-white p-4 mt-n5">
-                                <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                                </p>
-                                <h5 class="text-truncate">Client Name</h5>
-                                <span>Profession</span>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <img class="img-fluid mx-auto" src="{{asset('front/img/testimonial-2.jpg')}}" alt="testimoial2" style="width: 100px; height: 100px;" >
-                            <div class="testimonial-text bg-white p-4 mt-n5">
-                                <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                                </p>
-                                <h5 class="text-truncate">Client Name</h5>
-                                <span>Profession</span>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <img class="img-fluid mx-auto" src="{{asset('front/img/testimonial-3.jpg')}}" alt="testimonial3" style="width: 100px; height: 100px;" >
-                            <div class="testimonial-text bg-white p-4 mt-n5">
-                                <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                                </p>
-                                <h5 class="text-truncate">Client Name</h5>
-                                <span>Profession</span>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <img class="img-fluid mx-auto" src="{{asset('front/img/testimonial-4.jpg')}}" alt="testmonial4" style="width: 100px; height: 100px;" >
-                            <div class="testimonial-text bg-white p-4 mt-n5">
-                                <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                                </p>
-                                <h5 class="text-truncate">Client Name</h5>
-                                <span>Profession</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Testimonial End -->
-
-
-            <!-- Blog Start -->
-            <div class="container-fluid py-5">
-                <div class="container pt-5 pb-3">
-                    <div class="text-center mb-3 pb-3">
-                        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Our Blog</h6>
-                        <h1>Latest From Our Blog</h1>
-                    </div>
-                    <div class="row pb-3">
-                        <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                            <div class="blog-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid w-100" src="{{asset('front/img/blog-1.jpg')}}" alt="blog1">
-                                    <div class="blog-date">
-                                        <h6 class="font-weight-bold mb-n1">01</h6>
-                                        <small class="text-white text-uppercase">Jan</small>
-                                    </div>
-                                </div>
-                                <div class="bg-white p-4">
-                                    <div class="d-flex mb-2">
-                                        <a class="text-primary text-uppercase text-decoration-none" href="">Admin</a>
-                                        <span class="text-primary px-2">|</span>
-                                        <a class="text-primary text-uppercase text-decoration-none" href="">Tours & Travel</a>
-                                    </div>
-                                    <a class="h5 m-0 text-decoration-none" href="">Dolor justo sea kasd lorem clita justo diam amet</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                            <div class="blog-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid w-100" src="{{asset('front/img/blog-2.jpg')}}" alt="blog2">
-                                    <div class="blog-date">
-                                        <h6 class="font-weight-bold mb-n1">01</h6>
-                                        <small class="text-white text-uppercase">Jan</small>
-                                    </div>
-                                </div>
-                                <div class="bg-white p-4">
-                                    <div class="d-flex mb-2">
-                                        <a class="text-primary text-uppercase text-decoration-none" href="">Admin</a>
-                                        <span class="text-primary px-2">|</span>
-                                        <a class="text-primary text-uppercase text-decoration-none" href="">Tours & Travel</a>
-                                    </div>
-                                    <a class="h5 m-0 text-decoration-none" href="">Dolor justo sea kasd lorem clita justo diam amet</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                            <div class="blog-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid w-100" src="{{asset('front/img/blog-3.jpg')}}" alt="blog3">
-                                    <div class="blog-date">
-                                        <h6 class="font-weight-bold mb-n1">01</h6>
-                                        <small class="text-white text-uppercase">Jan</small>
-                                    </div>
-                                </div>
-                                <div class="bg-white p-4">
-                                    <div class="d-flex mb-2">
-                                        <a class="text-primary text-uppercase text-decoration-none" href="">Admin</a>
-                                        <span class="text-primary px-2">|</span>
-                                        <a class="text-primary text-uppercase text-decoration-none" href="">Tours & Travel</a>
-                                    </div>
-                                    <a class="h5 m-0 text-decoration-none" href="">Dolor justo sea kasd lorem clita justo diam amet</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Blog End -->
 
 @endsection
 

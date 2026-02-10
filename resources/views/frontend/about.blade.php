@@ -9,228 +9,150 @@
 
 @section('content')
 
-        <!-- Header Start -->
-        <div class="container-fluid page-header">
+         <div class="page-spacer"></div>
+
+         <!-- Hero Section -->
+         <section class="section bg-gradient">
             <div class="container">
-                <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-                    <h3 class="display-4 text-white text-uppercase">About</h3>
-                    <div class="d-inline-flex text-white">
-                        <p class="m-0 text-uppercase"><a class="text-white" href="{{url('/')}}">Home</a></p>
-                        <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                        <p class="m-0 text-uppercase">About</p>
-                    </div>
-                </div>
+                  <div class="about-hero">
+                     <h1 class="page-title">About Our Farm</h1>
+                     <p class="about-mission">Committed to Excellence in Goat Farming</p>
+                     <p class="about-description">Guhan Goat Farms has been a trusted name in quality livestock breeding for over a decade. We specialize in raising healthy goats using sustainable and ethical farming practices.</p>
+                  </div>
+
+                  <!-- Stats -->
+                  <div class="grid grid-4">
+                     <div class="stat-card">
+                        <div class="stat-value">500+</div>
+                        <div class="stat-label">Healthy Goats</div>
+                     </div>
+                     <div class="stat-card">
+                        <div class="stat-value">15+</div>
+                        <div class="stat-label">Years Experience</div>
+                     </div>
+                     <div class="stat-card">
+                        <div class="stat-value">200+</div>
+                        <div class="stat-label">Happy Customers</div>
+                     </div>
+                     <div class="stat-card">
+                        <div class="stat-value">100%</div>
+                        <div class="stat-label">Quality Assured</div>
+                     </div>
+                  </div>
             </div>
-        </div>
-        <!-- Header End -->
+         </section>
 
-
-        <!-- About Start -->
-        <div class="container-fluid py-5">
-            <div class="container pt-5">
-                <div class="row">
-                    <div class="col-lg-6" style="min-height: 500px;">
-                        <div class="position-relative h-100">
-                            <img class="position-absolute w-100 h-100" src="{{asset('front/img/about.jpg')}}" alt="about" style="object-fit: cover;">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 pt-5 pb-lg-5">
-                        <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
-                            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">About Us</h6>
-                            <h1 class="mb-3">We Provide Best Tour Packages In Your Budget</h1>
-                            <p>Dolores lorem lorem ipsum sit et ipsum. Sadip sea amet diam dolore sed et. Sit rebum labore sit sit ut vero no sit. Et elitr stet dolor sed sit et sed ipsum et kasd ut. Erat duo eos et erat sed diam duo</p>
-                            <div class="row mb-4">
-                                <div class="col-6">
-                                    <img class="img-fluid" src="{{asset('front/img/about-1.jpg')}}" alt="about1">
-                                </div>
-                                <div class="col-6">
-                                    <img class="img-fluid" src="{{asset('front/img/about-2.jpg')}}" alt="about2">
-                                </div>
-                            </div>
-                            <a href="" class="btn btn-primary mt-1">Book Now</a>
-                        </div>
-                    </div>
-                </div>
+         <!-- Images Section -->
+         <section class="section">
+            <div class="container">
+                  <div class="grid grid-2">
+                     <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1748524291921-711d5a929e8c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MTJ8MHwxfHNlYXJjaHwyfHxmYXJtJTIwcGFzdG9yYWx8ZW58MHx8fHwxNzcwMjUzMzE5fDA&ixlib=rb-4.1.0&q=85" alt="Farm Facility">
+                     </div>
+                     <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1727961665663-6b639b8b1908?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MTJ8MHwxfHNlYXJjaHwzfHxmYXJtJTIwcGFzdG9yYWx8ZW58MHx8fHwxNzcwMjUzMzE5fDA&ixlib=rb-4.1.0&q=85" alt="Farm Landscape">
+                     </div>
+                  </div>
             </div>
-        </div>
-        <!-- About End -->
+         </section>
 
-
-        <!-- Feature Start -->
-        <div class="container-fluid pb-5">
-            <div class="container pb-5">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="d-flex mb-4 mb-lg-0">
-                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3" style="height: 100px; width: 100px;">
-                                <i class="fa fa-2x fa-money-check-alt text-white"></i>
-                            </div>
-                            <div class="d-flex flex-column">
-                                <h5 class="">Competitive Pricing</h5>
-                                <p class="m-0">Magna sit magna dolor duo dolor labore rebum amet elitr est diam sea</p>
-                            </div>
+         <!-- Values Section -->
+         <section class="section bg-light">
+            <div class="container">
+                  <div class="section-header">
+                     <h2 class="section-title">Our Core Values</h2>
+                     <p class="section-subtitle">The principles that guide everything we do</p>
+                  </div>
+                  <div class="grid grid-3">
+                     <div class="value-card">
+                        <div class="icon-circle">
+                              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                 <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+                              </svg>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="d-flex mb-4 mb-lg-0">
-                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3" style="height: 100px; width: 100px;">
-                                <i class="fa fa-2x fa-award text-white"></i>
-                            </div>
-                            <div class="d-flex flex-column">
-                                <h5 class="">Best Services</h5>
-                                <p class="m-0">Magna sit magna dolor duo dolor labore rebum amet elitr est diam sea</p>
-                            </div>
+                        <h3 class="card-title">Quality First</h3>
+                        <p class="card-text">We never compromise on the health and well-being of our livestock. Every goat receives the best care, nutrition, and medical attention.</p>
+                     </div>
+                     <div class="value-card">
+                        <div class="icon-circle">
+                              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                              </svg>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="d-flex mb-4 mb-lg-0">
-                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3" style="height: 100px; width: 100px;">
-                                <i class="fa fa-2x fa-globe text-white"></i>
-                            </div>
-                            <div class="d-flex flex-column">
-                                <h5 class="">Worldwide Coverage</h5>
-                                <p class="m-0">Magna sit magna dolor duo dolor labore rebum amet elitr est diam sea</p>
-                            </div>
+                        <h3 class="card-title">Customer Focus</h3>
+                        <p class="card-text">Building lasting relationships with our customers through transparency, honest communication, and exceptional service.</p>
+                     </div>
+                     <div class="value-card">
+                        <div class="icon-circle">
+                              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                 <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                              </svg>
                         </div>
-                    </div>
-                </div>
+                        <h3 class="card-title">Sustainability</h3>
+                        <p class="card-text">Implementing eco-friendly farming practices that protect the environment while ensuring profitable and sustainable operations.</p>
+                     </div>
+                  </div>
             </div>
-        </div>
-        <!-- Feature End -->
+         </section>
 
-
-        <!-- Registration Start -->
-        <div class="container-fluid bg-registration py-5" style="margin: 90px 0;">
-            <div class="container py-5">
-                <div class="row align-items-center">
-                    <div class="col-lg-7 mb-5 mb-lg-0">
-                        <div class="mb-4">
-                            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Mega Offer</h6>
-                            <h1 class="text-white"><span class="text-primary">30% OFF</span> For Honeymoon</h1>
-                        </div>
-                        <p class="text-white">Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos,
-                            ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est
-                            dolor</p>
-                        <ul class="list-inline text-white m-0">
-                            <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Labore eos amet dolor amet diam</li>
-                            <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Etsea et sit dolor amet ipsum</li>
-                            <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Diam dolor diam elitripsum vero.</li>
+         <!-- What We Offer Section -->
+         <section class="section">
+            <div class="container">
+                  <div class="two-column-section">
+                     <div class="content-column">
+                        <h2 class="section-title">What We Offer</h2>
+                        <p class="section-text">At Guhan Goat Farms, we provide comprehensive solutions for all your goat farming needs. From premium breeding stock to expert consultation, we're here to support your success.</p>
+                        <ul class="checklist">
+                              <li>
+                                 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                 </svg>
+                                 <span>Premium quality breeding stock with verified genetics</span>
+                              </li>
+                              <li>
+                                 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                 </svg>
+                                 <span>Complete health documentation and vaccination records</span>
+                              </li>
+                              <li>
+                                 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                 </svg>
+                                 <span>Professional farm management consultation</span>
+                              </li>
+                              <li>
+                                 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                 </svg>
+                                 <span>Ongoing support and guidance for new farmers</span>
+                              </li>
+                              <li>
+                                 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                 </svg>
+                                 <span>Sustainable farming practices training</span>
+                              </li>
+                              <li>
+                                 <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                 </svg>
+                                 <span>Market connections and sales support</span>
+                              </li>
                         </ul>
-                    </div>
-                    <div class="col-lg-5">
-                        <div class="card border-0">
-                            <div class="card-header bg-primary text-center p-4">
-                                <h1 class="text-white m-0">Sign Up Now</h1>
-                            </div>
-                            <div class="card-body rounded-bottom bg-white p-5">
-                                <form>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control p-4" placeholder="Your name" required="required" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="email" class="form-control p-4" placeholder="Your email" required="required" />
-                                    </div>
-                                    <div class="form-group">
-                                        <select class="custom-select px-4" style="height: 47px;">
-                                            <option selected>Select a destination</option>
-                                            <option value="1">destination 1</option>
-                                            <option value="2">destination 1</option>
-                                            <option value="3">destination 1</option>
-                                        </select>
-                                    </div>
-                                    <div>
-                                        <button class="btn btn-primary btn-block py-3" type="submit">Sign Up Now</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                     </div>
+                     <div class="image-column">
+                        <img src="https://images.unsplash.com/photo-1597214189145-b8365985d50a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwyfHxnb2F0JTIwZmFybXxlbnwwfHx8fDE3NzAyNTMzMTB8MA&ixlib=rb-4.1.0&q=85" alt="Goat Farm">
+                     </div>
+                  </div>
             </div>
-        </div>
-        <!-- Registration End -->
-
-
-        <!-- Team Start -->
-        <div class="container-fluid py-5">
-            <div class="container pt-5 pb-3">
-                <div class="text-center mb-3 pb-3">
-                    <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Guides</h6>
-                    <h1>Our Travel Guides</h1>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                        <div class="team-item bg-white mb-4">
-                            <div class="team-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="{{asset('front/img/team-1.jpg')}}" alt="team1">
-                                <div class="team-social">
-                                    <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center py-4">
-                                <h5 class="text-truncate">Guide Name</h5>
-                                <p class="m-0">Designation</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                        <div class="team-item bg-white mb-4">
-                            <div class="team-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="{{asset('front/img/team-2.jpg')}}" alt="team2">
-                                <div class="team-social">
-                                    <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center py-4">
-                                <h5 class="text-truncate">Guide Name</h5>
-                                <p class="m-0">Designation</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                        <div class="team-item bg-white mb-4">
-                            <div class="team-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="{{asset('front/img/team-3.jpg')}}" alt="team3">
-                                <div class="team-social">
-                                    <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center py-4">
-                                <h5 class="text-truncate">Guide Name</h5>
-                                <p class="m-0">Designation</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                        <div class="team-item bg-white mb-4">
-                            <div class="team-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="{{asset('front/img/team-4.jpg')}}" alt="team4">
-                                <div class="team-social">
-                                    <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center py-4">
-                                <h5 class="text-truncate">Guide Name</h5>
-                                <p class="m-0">Designation</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Team End -->
+         </section>
 
 @endsection
 

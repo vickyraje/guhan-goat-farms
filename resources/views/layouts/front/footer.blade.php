@@ -1,70 +1,54 @@
-            <!-- Footer Start -->
-            <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5 foot-sec" style="margin-top: 90px;">
-                <div class="row pt-5">
-                    <div class="col-lg-3 col-md-6 mb-5">
-                        <a href="" class="navbar-brand fot-log">
-                            <span><img src="{{asset('public/front/img/logo.png')}}" alt="logo"></span>
-                        </a>
-                        <p>Sed ipsum clita tempor ipsum ipsum amet sit ipsum lorem amet labore rebum lorem ipsum dolor. No sed vero lorem dolor dolor</p>
-                        <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Follow Us</h6>
-                        <div class="d-flex justify-content-start">
-
-                            <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-
-                            <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+            <!-- Footer -->
+            <footer class="footer">
+               <div class="container">
+                     <div class="footer-grid">
+                        <div class="footer-col">
+                           <h3 class="footer-title">Guhan Goat Farms</h3>
+                           <p class="footer-text">Premium goat farming with sustainable practices. Quality livestock breeding and expert farm consultation services.</p>
+                           <div class="social-links">
+                                 <a href="#" class="social-link">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                                 </a>
+                                 <a href="#" class="social-link">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="white" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="white"/></svg>
+                                 </a>
+                                 <a href="#" class="social-link">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+                                 </a>
+                           </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-5">
-                        <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Our Services</h5>
-                        <div class="d-flex flex-column justify-content-start">
-                            <a class="text-white-50 mb-2" href="{{url('about')}}"><i class="fa fa-angle-right mr-2"></i>About</a>
-                            <a class="text-white-50 mb-2" href="{{url('destination')}}"><i class="fa fa-angle-right mr-2"></i>Destination</a>
-                            <a class="text-white-50 mb-2" href="{{url('service')}}"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                            <a class="text-white-50 mb-2" href="{{url('package')}}"><i class="fa fa-angle-right mr-2"></i>Packages</a>
-                            <a class="text-white-50 mb-2" href="{{url('guide')}}"><i class="fa fa-angle-right mr-2"></i>Guides</a>
-                            <a class="text-white-50 mb-2" href="{{url('testimonial')}}"><i class="fa fa-angle-right mr-2"></i>Testimonial</a>
-                            <a class="text-white-50" href="{{url('blog')}}"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+                        <div class="footer-col">
+                           <h4 class="footer-heading">Quick Links</h4>
+                           <ul class="footer-links">
+                                 <li><a href="{{ route('home') }}">Home</a></li>
+                                 <li><a href="{{ route('about') }}">About Us</a></li>
+                                 <li><a href="{{ route('contact') }}">Contact</a></li>
+                           </ul>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-5">
-                        <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Usefull Links</h5>
-                        <div class="d-flex flex-column justify-content-start">
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Destination</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Packages</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Guides</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Testimonial</a>
-                            <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+                        <div class="footer-col">
+                           <h4 class="footer-heading">Our Services</h4>
+                           <ul class="footer-links">
+                                 <li>Goat Breeding</li>
+                                 <li>Livestock Sales</li>
+                                 <li>Farm Consultation</li>
+                                 <li>Health Support</li>
+                           </ul>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-5">
-                        <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contact Us</h5>
-                        <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, HYD</p>
-                        <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-                        <p><i class="fa fa-envelope mr-2"></i>info@govaabo.com</p>
-                        <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Newsletter</h6>
-                        <div class="w-100">
-                            <div class="input-group">
-                                <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Your Email">
-                                <div class="input-group-append">
-                                    <button class="btn btn-primary px-3">Sign Up</button>
-                                </div>
-                            </div>
+                        <div class="footer-col">
+                           <h4 class="footer-heading">Contact Us</h4>
+                           <ul class="footer-contact">
+                                 <li>📍 Guhan Goat Farms, Rural District</li>
+                                 <li>📞 +91 98765 43210</li>
+                                 <li>✉️ info@guhangoatfarms.com</li>
+                           </ul>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
-                <div class="row">
-                    <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-                        <p class="m-0 text-white-50">Copyright &copy; GO VAA BO. All Rights Reserved.</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!-- Footer End -->
-
-
-            <!-- Back to Top -->
-            <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+                     </div>
+                     <div class="footer-bottom">
+                        <p>© {{ date('Y')}} Guhan Goat Farms. All rights reserved.</p>
+                        <div class="footer-bottom-links">
+                           <a href="#">Privacy Policy</a>
+                           <a href="#">Terms of Service</a>
+                        </div>
+                     </div>
+               </div>
+            </footer>
