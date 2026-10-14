@@ -1,4 +1,4 @@
-### Steps for Basic Laravel
+# Steps for Basic Laravel
 
 php artisan make:model Name -mc
 
