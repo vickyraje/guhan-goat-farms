@@ -1,4 +1,5 @@
-# Steps for Basic Laravel
+### Steps for Basic Laravel
+
 php artisan make:model Name -mc
 php artisan optimize:clear
 php artisan migrate
