@@ -12,4 +12,4 @@ php artisan db:seed
 
 php artisan migrate --path=/database/migrations/name.php
 
-php artisan migrate:rollback --path=/database/migrations/name.php 
+php artisan migrate:rollback --path=/database/migrations/name.php
